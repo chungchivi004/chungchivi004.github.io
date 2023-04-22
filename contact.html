@@ -1,0 +1,102 @@
+<!-- 
+RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Chung Chi Vi
+ID: 3979361
+Acknowledgement:
+  I would like to acknowledge the following resources that were used in the development of this project:
+    Visual Studio Code: I used this to write code and review all of my code.
+    Flaticon (https://www.flaticon.com/) for providing icons and logos used in the project.
+    For the book's description:
+      https://www.britannica.com/topic/The-Lord-of-the-Rings
+      https://www.amazon.com/Lord-Rings-J-R-R-Tolkien/dp/0544003411
+    For the book's images:
+      https://www.amazon.com/Lord-Rings-J-R-R-Tolkien/dp/0544003411
+      https://tiki.vn/the-lord-of-the-rings-p416406.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vi's Bookstore - Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png" type="image/x-icon" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="home.html">
+        <img src="logo.png" alt="Bookstore Logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="fiction.html">Fiction</a></li>
+        <li><a href="#">Non-Fiction</a></li>
+        <li><a href="#">Children's Book</a></li>
+        <li><a href="#">Reference Books</a></li>
+        <li><a href="#">Textbooks</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Us</h1>
+    <form id="contact-form" action="#" method="post">
+      <label for="contact-purpose">Contact Purpose*</label>
+      <select id="contact-purpose" name="contact-purpose" required>
+        <option value="">-- Select One --</option>
+        <option value="buy-books">I WANT TO BUY BOOKS</option>
+        <option value="sell-books">I WANT TO SELL BOOKS</option>
+      </select>
+
+      <label for="name">Name*</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone*</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label>Contact Preference*</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="contact-preference" value="email" required>By Email</label>
+        <label><input type="checkbox" name="contact-preference" value="phone" required>By Phone</label>
+      </div>
+
+      <label>Receive Weekly Newsletter</label>
+      <div class="radio-group">
+        <label><input type="radio" name="newsletter" value="yes" checked>Yes</label>
+        <label><input type="radio" name="newsletter" value="no">No</label>
+      </div>
+
+      <label for="notes">Extra Notes</label>
+      <textarea id="notes" name="notes"></textarea>
+
+      <div class="buttons">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Copyright</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+
+</html>

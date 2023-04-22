@@ -1,0 +1,453 @@
+/*
+RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Chung Chi Vi
+ID: 3979361
+Acknowledgement:
+  I would like to acknowledge the following resources that were used in the development of this project:
+    Visual Studio Code: I used this to write code and review all of my code.
+    Flaticon (https://www.flaticon.com/) for providing icons and logos used in the project.
+    For the book's description:
+      https://www.britannica.com/topic/The-Lord-of-the-Rings
+      https://www.amazon.com/Lord-Rings-J-R-R-Tolkien/dp/0544003411
+    For the book's images:
+      https://www.amazon.com/Lord-Rings-J-R-R-Tolkien/dp/0544003411
+      https://tiki.vn/the-lord-of-the-rings-p416406.html */
+body {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #888;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo img {
+  height: 100px;
+  width: 100px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+nav li {
+  margin: 0 25px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #f1c40f;
+}
+
+nav b {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav b:hover {
+  color: #f1c40f;
+}
+
+main {
+  max-width: auto;
+  margin: 0 auto;
+  padding: 50px 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form textarea:focus {
+  border-color: #3e8e41;
+  outline: none;
+}
+
+.checkbox-group,
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.checkbox-group label,
+.radio-group label {
+  margin-right: 20px;
+}
+
+.checkbox-group input form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  background-color: white;
+}
+
+label[for="purpose"],
+label[for="name"],
+label[for="email"],
+label[for="phone"],
+label[for="notes"] {
+  display: block;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.checkbox-group label,
+.radio-group label {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.checkbox-group input[type="checkbox"],
+.radio-group input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+button[type="submit"],
+button[type="reset"] {
+  background-color: #008cba;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+  background-color: #005a80;
+}
+
+button[type="submit"]:focus,
+button[type="reset"]:focus {
+  outline: none;
+}
+
+button[type="reset"] {
+  background-color: #ccc;
+  color: black;
+}
+
+@media only screen and (max-width: 960px) {
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label,
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+  }
+
+  label:not(:last-child),
+  input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([type="file"]),
+  textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+
+  .checkbox-group,
+  .radio-group {
+    flex-direction: row;
+  }
+
+  .checkbox-group label,
+  .radio-group label {
+    display: block;
+    margin-right: 0;
+  }
+
+  .checkbox-group input[type="checkbox"],
+  .radio-group input[type="radio"] {
+    margin-right: 0.5rem;
+  }
+
+  button[type="submit"],
+  button[type="reset"] {
+    width: 90%;
+    margin: 1rem 0;
+  }
+}
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.category {
+  width: 50%;
+}
+
+.category h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.category a {
+  color: #000;
+  font-size: 50px;
+  text-decoration: none;
+}
+
+.category a:hover {
+  color: #f1c40f;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-decoration: none;
+}
+
+.book {
+  margin-bottom: 50px;
+}
+
+.book h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.books a:hover {
+  color: #f1c40f;
+}
+
+.book-images {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.book-images img {
+  height: auto;
+}
+
+.small-images {
+  display: flex;
+  justify-content: center;
+}
+
+.small-images:hover {
+  transform: scale(6.1);
+}
+
+.book-details {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.add-to-cart {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #3e8e41;
+}
+
+.book-description {
+  width: 100%;
+}
+
+.book-description h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.book-description p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+nav {
+  flex-direction: column;
+  padding: 20px;
+}
+
+.book-images {
+  flex-direction: column;
+}
+
+.book-images img {
+  height: auto;
+  max-width: 100%;
+}
+
+.small-images {
+  margin: 0;
+  width: 100%;
+}
+
+.small-images img {
+  height: 75px;
+  margin: 5px;
+}
+
+.book-details {
+  flex-direction: column;
+}
+
+.price {
+  margin-bottom: 10px;
+}
+
+.add-to-cart {
+  width: 10%;
+}
+
+.book-description {
+  padding: 20px;
+}
+
+.book-description h2 {
+  font-size: 20px;
+}
+
+.book-description p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.categories {
+  flex-direction: column;
+}
+
+.category {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.video {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.video iframe {
+  width: 100%;
+  height: 400px;
+}
+
+footer {
+  background-color: #888;
+  color: #ffffff;
+  padding: 20px;
+}
+
+footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+footer nav li {
+  margin: 0 25px;
+}
+
+footer nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+footer nav a:hover {
+  color: #f1c40f;
+}
