@@ -1,4 +1,4 @@
-Link to the home page:
+Link to the online website:
 https://chungchivi004.github.io/
 
 Link to the GitHub repository:
